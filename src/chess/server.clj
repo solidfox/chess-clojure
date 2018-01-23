@@ -16,7 +16,7 @@
 
 (comment (count (:channels (deref websocket-atom))))
 
-(defn uuid [] (str (java.util.UUID/randomUUID)))
+(defn create-uuid [] (str (java.util.UUID/randomUUID)))
 
 (defn get-player-id [channel]
   (get-in (deref websocket-atom)
@@ -26,7 +26,7 @@
   (println "client connected")
   (swap! websocket-atom update :channels (fn [channels]
                                            (assoc channels channel (merge {:channel channel
-                                                                           :id      (uuid)}
+                                                                           :id      (create-uuid)}
                                                                           (condp = (count channels)
                                                                             0 {:game-player-id :large}
                                                                             1 {:game-player-id :small}
