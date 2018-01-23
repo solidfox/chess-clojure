@@ -1,5 +1,5 @@
 (ns chess.spec
-  (:require [clojure.spec :as s]))
+  (:require [clojure.spec.alpha :as s]))
 
 (s/def ::coordinate (s/and int?
                            (fn [x] (<= 0 x 7))))

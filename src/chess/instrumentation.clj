@@ -1,6 +1,6 @@
 (ns chess.instrumentation
-  (:require [clojure.spec :as s]
-            [clojure.spec.test :as spec-test]
+  (:require [clojure.spec.alpha :as s]
+            [clojure.spec.test.alpha :as spec-test]
             [chess.spec]
             [chess.server]))
 

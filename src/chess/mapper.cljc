@@ -1,6 +1,6 @@
 (ns chess.mapper
   (:require [chess.spec]
-            [clojure.spec :refer [valid? explain]]
+            [clojure.spec.alpha :refer [valid? explain]]
             [clojure.test :refer [is]]
             [chess.core :refer [get-valid-moves move]]
             [test.core :refer [is= is-not error?]]
